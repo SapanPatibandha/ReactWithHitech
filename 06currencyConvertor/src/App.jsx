@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import { InputBox } from './components'
 import useCurrencyInfo from './hocks/useCurrencyInfo'
 
@@ -27,13 +26,13 @@ function App() {
 
   return (
         <div
-            className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+            className="w-screen h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
             style={{
               backgroundImage: `url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
             }}
         >
-            <div className="w-full">
-                <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+            <div className="w-full background-blur-sm px-3 py-5">
+                <div className="w-full max-w-md mx-auto border border-gray-100 rounded-lg p-5 backdrop-blur-sm bg-white/30">
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
@@ -65,7 +64,7 @@ function App() {
                                 amount={convertedAmount}
                                 currencyOptions={options}
                                 onCurrencyChange={(currency) => setTo(currency)}
-                                selectCurrency={from} 
+                                selectCurrency={to} 
                                 amountDisable
                             />
                         </div>

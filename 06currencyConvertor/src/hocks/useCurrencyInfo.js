@@ -5,10 +5,10 @@ function useCurrencyInfo(currency) {
     useEffect(() => {
         fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
         .then(res => res.json())
-        .then(data => setData(data[currency]))
-        console.log('Fetched data for', currency);  
+        .then(res => setData(res[currency]))
+        // console.log('Fetched data for', currency);  
     },[currency])
-    console.log('useCurrencyInfo called for', currency);
+    // console.log('useCurrencyInfo called for', currency);
     return data;
 }
 
